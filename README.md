@@ -1,4 +1,4 @@
-##netsase-music-webapp
+## netsase-music-webapp
 
 > 使用vuejs写的高仿网易云音乐的app，后续功能会不断更新
 

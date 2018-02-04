@@ -27,7 +27,7 @@ npm run e2e
 npm test
 ```         
      
-##技术总结
+## 技术总结
 * vuex进行状态管理
 * axios获取数据
 * muse-ui基于vue2.0+移动端web页面框架

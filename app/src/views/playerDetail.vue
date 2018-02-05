@@ -53,12 +53,14 @@ export default {
       show: true,
       list: [],
       url: "",
-      isClick: false
+      isClick: false,
+      isClear: false,
     };
   },
 
   created() {
     this.get();
+     this.updateTime();
   },
   mounted () {
     this.moveProgress();
@@ -85,7 +87,8 @@ export default {
       document.getElementById("myAudio").pause();
       this.isShow = false;
       document.getElementById("pic").style.animationPlayState = "paused";
-      this.updateTime();
+      clearInterval();
+
     },
     start() {
       this.$store.commit("play");
@@ -127,7 +130,7 @@ export default {
       });
       if(this.isClick ==false){
       this.isClick = true;
-      this.updateTime();
+      clearInterval();
   }
       if (this.isShow == false) {
         this.isShow = true;
@@ -199,7 +202,7 @@ export default {
         }
       }
       this.lyric = lrcObj;
-     this.updateTime();
+
     },
     //时间格式化
     formatTime(value) {
@@ -235,9 +238,7 @@ export default {
         this.isClick = false;
 
       }
-
      var timer = setInterval(()=>{
-       clearInterval();
       currentTime = currentTime+1;
       this.startTime = this.formatTime(currentTime);
      },1000)

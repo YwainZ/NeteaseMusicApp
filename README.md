@@ -34,9 +34,16 @@ npm test
 * localStorage存储数据。    
 
 ## 页面截图
-![index](http://upload-images.jianshu.io/upload_images/9381131-d1240778ebbcbd88.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-![index1](http://upload-images.jianshu.io/upload_images/9381131-9b4dd75732ff039e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-![index2](http://upload-images.jianshu.io/upload_images/9381131-ff60c7278c638076.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-![index3](http://upload-images.jianshu.io/upload_images/9381131-c94ce0fbeb3581ce.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+> ```txt
+--------- | -------------
+内容单元格 第一列第一格 | 内容单元格第二列第一格
+内容单元格 第一列第二格 多加文字 | 内容单元格第二列第二格
+```
+
+![index -w200](http://upload-images.jianshu.io/upload_images/9381131-d1240778ebbcbd88.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![index1 -w200](http://upload-images.jianshu.io/upload_images/9381131-9b4dd75732ff039e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![index2 -w200](http://upload-images.jianshu.io/upload_images/9381131-5416476d64355340.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![index3 -w200](http://upload-images.jianshu.io/upload_images/9381131-c94ce0fbeb3581ce.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 

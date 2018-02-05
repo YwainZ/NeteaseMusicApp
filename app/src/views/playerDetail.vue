@@ -21,7 +21,7 @@
         <span><i class="iconfont icon-gengduo1"></i></span>
       </div>
       <div class="footer">
-       <span>{{startTime}}</span><input type="range" :value="value"><span>{{endTime}}</span>
+       <span >{{startTime}}</span><input type="range" :value="value"><span>{{endTime}}</span>
       </div>
       <audio :src="this.songurl" autoplay  id="myAudio"  @ended="next" @canplay="filer"></audio>
       <div class="play">
@@ -52,7 +52,8 @@ export default {
       lyric: "",
       show: true,
       list: [],
-      url: ""
+      url: "",
+      isClick: false
     };
   },
 
@@ -84,6 +85,7 @@ export default {
       document.getElementById("myAudio").pause();
       this.isShow = false;
       document.getElementById("pic").style.animationPlayState = "paused";
+      this.updateTime();
     },
     start() {
       this.$store.commit("play");
@@ -123,11 +125,16 @@ export default {
         });
         document.getElementById("myAudio").play();
       });
+      if(this.isClick ==false){
+      this.isClick = true;
+      this.updateTime();
+  }
       if (this.isShow == false) {
         this.isShow = true;
         document.getElementById("pic").style.animationPlayState = "running";
       }
       this.value = 0;
+
     },
     playPre() {
       var len = 0;
@@ -211,7 +218,7 @@ export default {
     moveProgress(){
    var time = parseInt(document.getElementById("myAudio").duration);
      this.timer = setInterval(() => {
-      this.value += 1;
+      this.value += 0.1;
       if (this.value > time) {
         this.value = 0;
       }
@@ -221,8 +228,19 @@ export default {
     updateTime() {
      var currentTime = document.getElementById('myAudio').currentTime;
      var length = document.getElementById('myAudio').duration;
-     console.log(length)
-     this.startTime = this.formatTime(currentTime);
+      if(currentTime>=length||this.isClick == true){
+        clearInterval();
+        currentTime = 0;
+        this.startTime = this.formatTime(currentTime);
+        this.isClick = false;
+
+      }
+
+     var timer = setInterval(()=>{
+       clearInterval();
+      currentTime = currentTime+1;
+      this.startTime = this.formatTime(currentTime);
+     },1000)
      this.endTime = this.formatTime(length);
 
     },

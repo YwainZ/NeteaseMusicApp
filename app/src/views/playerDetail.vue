@@ -60,10 +60,11 @@ export default {
 
   created() {
     this.get();
-     this.updateTime();
+    this.updateTime();
   },
   mounted () {
     this.moveProgress();
+
   },
   methods: {
     get() {
@@ -87,7 +88,7 @@ export default {
       document.getElementById("myAudio").pause();
       this.isShow = false;
       document.getElementById("pic").style.animationPlayState = "paused";
-      clearInterval();
+      this.startTime = formatTime(0);
 
     },
     start() {
@@ -130,14 +131,13 @@ export default {
       });
       if(this.isClick ==false){
       this.isClick = true;
-      clearInterval();
+
   }
       if (this.isShow == false) {
         this.isShow = true;
         document.getElementById("pic").style.animationPlayState = "running";
       }
       this.value = 0;
-
     },
     playPre() {
       var len = 0;
@@ -231,14 +231,15 @@ export default {
     updateTime() {
      var currentTime = document.getElementById('myAudio').currentTime;
      var length = document.getElementById('myAudio').duration;
-      if(currentTime>=length||this.isClick == true){
+
+     var timer = setInterval(()=>{
+         if(currentTime>=length||this.isClick ==true){
         clearInterval();
         currentTime = 0;
-        this.startTime = this.formatTime(currentTime);
+        this.startTime = this.formatTime(0);
         this.isClick = false;
 
       }
-     var timer = setInterval(()=>{
       currentTime = currentTime+1;
       this.startTime = this.formatTime(currentTime);
      },1000)

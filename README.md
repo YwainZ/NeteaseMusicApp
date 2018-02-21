@@ -34,13 +34,16 @@ npm test
 * localStorage存储数据。    
 
 ## 页面截图
-<figure class="half">
-    <img src="http://upload-images.jianshu.io/upload_images/9381131-d1240778ebbcbd88.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-    <img src="http://upload-images.jianshu.io/upload_images/9381131-9b4dd75732ff039e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-</figure>
-<figure class="half">
-    <img src="http://upload-images.jianshu.io/upload_images/9381131-5416476d64355340.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-    <img src="http://upload-images.jianshu.io/upload_images/9381131-c94ce0fbeb3581ce.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-</figure>
+<div style="float:left;border:solid 1px 000;margin:2px;"><img src="http://upload-images.jianshu.io/upload_images/9381131-d1240778ebbcbd88.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" width="250" height="380" ></div>
+
+<div style="float:left;border:solid 1px 000;margin:2px;"><img src="http://upload-images.jianshu.io/upload_images/9381131-9b4dd75732ff039e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" width="250" height="380" ></div>
+
+250" height="380" ></div>
+
+<div style="float:left;border:solid 1px 000;margin:2px;"><img src="http://upload-images.jianshu.io/upload_images/9381131-5416476d64355340.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" width="250" height="380" ></div>
+
+<div style="float:left;border:solid 1px 000;margin:2px;"><img src="http://upload-images.jianshu.io/upload_images/9381131-c94ce0fbeb3581ce.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" width="250" height="380" ></div>
+
+
 
 
